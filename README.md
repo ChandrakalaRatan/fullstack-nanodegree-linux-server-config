@@ -12,8 +12,18 @@ _Note that since I have now graduated, the original server has been disabled. Yo
 something else there now, but what follows would apply when setting up a new server._
 
 # Configuration changes
-## Add user
-Add user `grader` with command: `useradd -m -s /bin/bash grader`
+## Add user and set a password
+Add user `grader` with command:
+
+```
+useradd -m -s /bin/bash grader
+```
+
+Set a password for the user (you need this when running the `sudo` command) with:
+
+```
+passwd grader
+```
 
 ## Add user grader to sudo group
 Assuming your Linux distro has a `sudo` group (like Ubuntu 16.04), simply add the user to
